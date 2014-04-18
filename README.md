@@ -6,9 +6,13 @@
 
 This plugin requires Grunt `~0.4.2`
 
-If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
+If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out 
+the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains 
+how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins
 
-```shell
+## Installation
+
+```bash
 $ npm install grunt-nar --save-dev
 ```
 
@@ -16,73 +20,47 @@ Once the plugin has been installed, it may be enabled
 inside your Gruntfile with this line of JavaScript:
 
 ```js
-grunt.loadNpmTasks('grunt-nar');
+grunt.loadNpmTasks('grunt-nar')
 ```
 
-## The "nar" task
+## Usage
 
-### Overview
-In your project's Gruntfile, add a section named `nar` to the data object passed into `grunt.initConfig()`
+### Create
 
 ```js
 grunt.initConfig({
   nar: {
-    options: {
-      // Task-specific options go here.
-    },
-    your_target: {
-      // Target-specific file lists and/or options go here.
+    create: {
+      src: 'package.json',
+      dest: 'archives/'
     },
   },
 })
 ```
 
-### Options
-
-#### options.separator
-Type: `String`
-Default value: `',  '`
-
-A string value that is used to do something with whatever.
-
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
-
-A string value that is used to do something else with whatever else.
-
-### Usage Examples
-
-#### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
+### Extract
 
 ```js
 grunt.initConfig({
   nar: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    }
+    options: { mode: 'extract' },
+    src: 'app-0.1.0.nar',
+    dest: 'files/'
   }
 })
 ```
 
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
+For more use case examples, see [Gruntfile][example]
 
-```js
-grunt.initConfig({
-  nar: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-})
-```
+### Options
+
+#### mode 
+Type: `string` Default: `create`
+
+Define the operation mode. Possible values are: `create` and `extract`
+
+For aditional supported options, see the [create][create-options] 
+and [extract][extract-options] available options in [nar][nar]
 
 ## License
 
@@ -94,3 +72,5 @@ grunt.initConfig({
 [npm]: http://npmjs.org/package/grunt-nar
 [grunt]: http://gruntjs.com
 [example]: https://github.com/h2non/grunt-nar/blob/master/Gruntfile.js
+[create-options]: https://github.com/h2non/nar#narcreateoptions
+[extract-options]: https://github.com/h2non/nar#narextractoptions
