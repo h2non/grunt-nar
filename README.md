@@ -59,8 +59,8 @@ Type: `string` Default: `create`
 
 Define the operation mode. Possible values are: `create` and `extract`
 
-For aditional supported options, see the [create][create-options] 
-and [extract][extract-options] available options in [nar][nar]
+For aditional avaiable options, see [create][create-options] 
+and [extract][extract-options] supported options in [nar][nar]
 
 ## License
 
