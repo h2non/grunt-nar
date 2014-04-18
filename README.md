@@ -71,6 +71,6 @@ and [extract][extract-options] supported options in [nar][nar]
 [gemnasium]: https://gemnasium.com/h2non/grunt-nar
 [npm]: http://npmjs.org/package/grunt-nar
 [grunt]: http://gruntjs.com
-[example]: https://github.com/h2non/grunt-nar/blob/master/Gruntfile.js
+[example]: https://github.com/h2non/grunt-nar/blob/master/Gruntfile.coffee
 [create-options]: https://github.com/h2non/nar#narcreateoptions
 [extract-options]: https://github.com/h2non/nar#narextractoptions
