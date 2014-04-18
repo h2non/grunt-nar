@@ -1,0 +1,45 @@
+{
+  "name": "grunt-nar",
+  "description": "Create and extract nar archives",
+  "version": "0.1.0",
+  "repository": "h2non/grunt-nar",
+  "license": "MIT",
+  "author": {
+    "name": "Tomas Aparicio",
+    "email": "tomas@aparicio.me"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "nar": "^0.1.4",
+    "async": "^0.7.0",
+    "hu": "~0.1.0-rc.2"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.2",
+    "grunt-contrib-clean": "^0.4.0",
+    "grunt-mocha-cli": "^1.8.0",
+    "coffee-script": "^1.7.1"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.2"
+  },
+  "keywords": [
+    "gruntplugin",
+    "nar",
+    "application",
+    "executable",
+    "tar",
+    "tarball",
+    "archive",
+    "archiver",
+    "compress",
+    "compression",
+    "file",
+    "files"
+  ]
+}
