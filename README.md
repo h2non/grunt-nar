@@ -33,8 +33,8 @@ grunt.initConfig({
     create: {
       src: 'package.json',
       dest: 'archives/'
-    },
-  },
+    }
+  }
 })
 ```
 
