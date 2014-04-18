@@ -50,8 +50,8 @@ grunt.initConfig({
 })
 ```
 
-For more use case examples, see [Gruntfile][example]
-
+See [Gruntfile][example] for more examples
+ 
 ### Options
 
 #### mode 
