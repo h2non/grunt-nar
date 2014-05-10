@@ -50,4 +50,4 @@ describe 'extract', ->
       assert.equal grunt.file.exists("#{base}/extract-multiple/.nar.json"), true
 
     it 'should exists hu.js', ->
-      assert.equal grunt.file.exists("#{base}/extract-multiple/hu.js"), true
+      assert.equal grunt.file.exists("#{base}/extract-multiple/lib/hu.js"), true
