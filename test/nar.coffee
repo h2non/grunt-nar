@@ -2,7 +2,7 @@ grunt = require 'grunt'
 assert = require 'assert'
 base = "#{__dirname}/../.tmp"
 
-[ async, nar, hu ] = grunt.file.expand { cwd: "#{base}" }, '*.nar'
+[ fw, nar, hu ] = grunt.file.expand { cwd: "#{base}" }, '*.nar'
 
 describe 'create', ->
 
@@ -16,8 +16,8 @@ describe 'create', ->
     it 'should exists the hu archive', ->
       assert.equal grunt.file.exists("#{base}/#{hu}"), true
 
-    it 'should exists the async archive', ->
-      assert.equal grunt.file.exists("#{base}/#{async}"), true
+    it 'should exists the fw archive', ->
+      assert.equal grunt.file.exists("#{base}/#{fw}"), true
 
 describe 'extract', ->
 
@@ -35,8 +35,8 @@ describe 'extract', ->
     it 'should exists hu dependency package', ->
       assert.equal grunt.file.exists("#{base}/extract/node_modules/hu"), true
 
-    it 'should exists async dependency package', ->
-      assert.equal grunt.file.exists("#{base}/extract/node_modules/async"), true
+    it 'should exists fw dependency package', ->
+      assert.equal grunt.file.exists("#{base}/extract/node_modules/fw"), true
 
     it 'should exists .bin directory', ->
       assert.equal grunt.file.exists("#{base}/extract/node_modules/.bin"), true

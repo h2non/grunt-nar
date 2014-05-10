@@ -16,8 +16,8 @@
   },
   "dependencies": {
     "nar": "~0.2.0",
-    "async": "~0.7.0",
-    "hu": "~0.1.0-rc.2"
+    "hu": "~0.1.0",
+    "fw": "~0.1.2"
   },
   "devDependencies": {
     "grunt": "~0.4.2",

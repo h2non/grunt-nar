@@ -1,6 +1,6 @@
 nar = require 'nar'
 hu = require 'hu'
-{ parallel } = require 'async'
+{ parallel } = require 'fw'
 
 module.exports = (grunt) ->
 
