@@ -1,7 +1,7 @@
 {
   "name": "grunt-nar",
   "description": "Create and extract nar archives",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "repository": "h2non/grunt-nar",
   "license": "MIT",
   "author": {
@@ -15,15 +15,15 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "nar": "^0.1.4",
-    "async": "^0.7.0",
+    "nar": "~0.2.0",
+    "async": "~0.7.0",
     "hu": "~0.1.0-rc.2"
   },
   "devDependencies": {
-    "grunt": "^0.4.2",
-    "grunt-contrib-clean": "^0.4.0",
-    "grunt-mocha-cli": "^1.8.0",
-    "coffee-script": "^1.7.1"
+    "grunt": "~0.4.2",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-mocha-cli": "~1.8.0",
+    "coffee-script": "~1.7.1"
   },
   "peerDependencies": {
     "grunt": "~0.4.2"
