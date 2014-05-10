@@ -19,7 +19,7 @@ module.exports = (grunt) ->
         dest: '.tmp/'
 
       createMultiple:
-        src: ['node_modules/hu', 'node_modules/async']
+        src: ['node_modules/hu', 'node_modules/fw']
         dest: '.tmp/'
 
       extract:
@@ -29,7 +29,7 @@ module.exports = (grunt) ->
 
       extractMultiple:
         options: mode: 'extract'
-        src: [".tmp/hu-*.nar", ".tmp/async-*.nar"]
+        src: [".tmp/hu-*.nar", ".tmp/fw-*.nar"]
         dest: '.tmp/extract-multiple'
 
     mochacli:
