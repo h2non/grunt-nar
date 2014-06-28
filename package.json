@@ -2,6 +2,7 @@
   "name": "grunt-nar",
   "description": "Create and extract nar archives",
   "version": "0.3.0",
+  "engineStrict": true,
   "repository": "h2non/grunt-nar",
   "license": "MIT",
   "author": {
@@ -9,7 +10,7 @@
     "email": "tomas@aparicio.me"
   },
   "engines": {
-    "node": ">= 0.8.0"
+    "node": ">= 0.10.0"
   },
   "scripts": {
     "test": "grunt test"
