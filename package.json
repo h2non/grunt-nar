@@ -1,7 +1,7 @@
 {
   "name": "grunt-nar",
   "description": "Create and extract nar archives",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "engineStrict": true,
   "repository": "h2non/grunt-nar",
   "license": "MIT",
