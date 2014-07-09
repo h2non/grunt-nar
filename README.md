@@ -62,6 +62,35 @@ Define the operation mode. Possible values are: `create` and `extract`
 For aditional avaiable options, see [create][create-options] 
 and [extract][extract-options] supported options in [nar][nar]
 
+#### executable
+Type: `boolean` Default: `false`
+
+Creates an [executable binary-like](https://github.com/h2non/nar#executables) archive
+
+#### os
+Type: `string` Default: `current os`
+
+Specify the target OS for the nar executable. 
+Applied only if the `executable` options is `true`
+
+Supported values are: `linux`, `darwin`, `sunos`
+
+#### arch
+Type: `string` Default: `current processor arch`
+
+Specify the target processor architecture binary type for the nar executable. 
+Applied only if the `executable` options is `true`
+
+Supported values are: `x86`, `x64`
+
+#### node
+Type: `string` Default: `current node version`
+
+Specify the node.js version to embed in the nar executable. 
+Applied only if the `executable` options is `true`
+
+Supported versions must be equal or higher that `0.8.x`
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT) © Tomas Aparicio

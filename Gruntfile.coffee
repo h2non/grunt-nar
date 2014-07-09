@@ -1,4 +1,5 @@
 module.exports = (grunt) ->
+  { version } = require './package.json'
 
   grunt.initConfig
     jshint:
@@ -22,9 +23,14 @@ module.exports = (grunt) ->
         src: ['node_modules/hu', 'node_modules/fw']
         dest: '.tmp/'
 
+      createExec:
+        options: executable: yes
+        src: 'package.json'
+        dest: '.tmp/'
+
       extract:
         options: mode: 'extract'
-        src: ".tmp/grunt-nar-*.nar"
+        src: ".tmp/grunt-nar-#{version}.nar"
         dest: '.tmp/extract'
 
       extractMultiple:

@@ -37,26 +37,29 @@ module.exports = (grunt) ->
       return onError err if err
       onSuccess()
 
-  create = (options) ->
-    (done) ->
-      nar.create(options)
-        .on('entry', (entry) ->
-          grunt.verbose.writeln "Adding file: #{entry.name}"
-        ).on('error', (err) ->
-          grunt.log.error "Cannot create archive: #{err}"
-          done err
-        ).on 'end', (path) ->
-          grunt.log.writeln "Archive created in: #{path}"
-          done()
+  create = (options) -> (done) ->
+    if options.executable
+      archive = nar.createExec options
+    else
+      archive = nar.create options
 
-  extract = (options) ->
-    (done) ->
-      nar.extract(options)
-        .on('entry', (entry) ->
-          grunt.verbose.writeln "Extracting file: #{entry.name}"
-        ).on('error', (err) ->
-          grunt.log.error "Cannot extract archive: #{err}"
-          done err
-        ).on 'end', (info) ->
-          grunt.log.writeln "Archive extracted in: #{info.dest}"
-          done()
+    archive
+      .on('entry', (entry) ->
+        grunt.verbose.writeln "Adding file: #{entry.path or entry.name}"
+      ).on('error', (err) ->
+        grunt.log.error "Cannot create archive: #{err}"
+        done err
+      ).on 'end', (path) ->
+        grunt.log.writeln "Archive created in: #{path}"
+        done()
+
+  extract = (options) -> (done) ->
+    nar.extract(options)
+      .on('entry', (entry) ->
+        grunt.verbose.writeln "Extracting file: #{entry.path or entry.name}"
+      ).on('error', (err) ->
+        grunt.log.error "Cannot extract archive: #{err}"
+        done err
+      ).on 'end', (info) ->
+        grunt.log.writeln "Archive extracted in: #{info.dest}"
+        done()

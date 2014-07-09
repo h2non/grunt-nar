@@ -2,7 +2,7 @@ grunt = require 'grunt'
 assert = require 'assert'
 base = "#{__dirname}/../.tmp"
 
-[ fw, nar, hu ] = grunt.file.expand { cwd: "#{base}" }, '*.nar'
+[ fw, exec, nar, hu ] = grunt.file.expand { cwd: "#{base}" }, '*.nar'
 
 describe 'create', ->
 
@@ -18,6 +18,11 @@ describe 'create', ->
 
     it 'should exists the fw archive', ->
       assert.equal grunt.file.exists("#{base}/#{fw}"), true
+
+  describe 'executable', ->
+
+    it 'should exist the executable archive', ->
+      assert.equal grunt.file.exists("#{base}/#{exec}"), true
 
 describe 'extract', ->
 
