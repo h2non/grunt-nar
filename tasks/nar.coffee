@@ -1,14 +1,19 @@
-nar = require 'nar'
 hu = require 'hu'
 { parallel } = require 'fw'
+{ resolve } = require 'requireg'
 
 module.exports = (grunt) ->
+  nar = null
+  narPath = resolve 'nar'
 
   grunt.registerMultiTask 'nar', 'Create and extract nar archives', ->
 
     archives = []
     done = @async()
     options = @options mode: 'create'
+
+    narError() unless narPath
+    nar = require narPath
 
     onError = (err) ->
       grunt.fail.warn "Task failed: #{err}"
@@ -63,3 +68,13 @@ module.exports = (grunt) ->
       ).on 'end', (info) ->
         grunt.log.writeln "Archive extracted in: #{info.dest}"
         done()
+
+  narError = ->
+    grunt.fail.fatal """
+
+    nar is not installed as global package
+
+    You must install it. Run:
+    npm install -g nar
+
+    """

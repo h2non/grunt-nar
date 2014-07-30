@@ -12,6 +12,12 @@ how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as inst
 
 ## Installation
 
+Install [nar](https://github.com/h2non/nar) as global package
+```bash
+$ nar install -g nar
+```
+
+Install the plugin
 ```bash
 $ npm install grunt-nar --save-dev
 ```
@@ -66,6 +72,10 @@ and [extract][extract-options] supported options in [nar][nar]
 Type: `boolean` Default: `false`
 
 Creates an [executable binary-like](https://github.com/h2non/nar#executables) archive
+
+The generated archive will be fully self-contained, which means 
+that `node` and any runtime dependency will be embedded,
+and therefore you just can deploy it and as binary
 
 #### os
 Type: `string` Default: `current os`
