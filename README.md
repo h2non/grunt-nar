@@ -65,8 +65,10 @@ Type: `string` Default: `create`
 
 Define the operation mode. Possible values are: `create` and `extract`
 
-For aditional avaiable options, see [create][create-options] 
+For aditional available options, see [create][create-options] 
 and [extract][extract-options] supported options in [nar][nar]
+
+For `package.json` params, see the [configuration](https://github.com/h2non/nar#configuration) documentation
 
 #### executable
 Type: `boolean` Default: `false`
