@@ -1,4 +1,4 @@
-# grunt-nar [![Build Status](https://travis-ci.org/h2non/grunt-nar.svg?branch=master)][travis] [![Dependency Status](https://gemnasium.com/h2non/grunt-nar.png)][gemnasium] [![NPM version](https://badge.fury.io/js/grunt-nar.png)][npm]
+# grunt-[nar](https://github.com/h2non/nar) [![Build Status](https://travis-ci.org/h2non/grunt-nar.svg?branch=master)][travis] [![Dependency Status](https://gemnasium.com/h2non/grunt-nar.png)][gemnasium] [![NPM version](https://badge.fury.io/js/grunt-nar.png)][npm]
 
 > Create and extract [nar][nar] archives from [Grunt][grunt]
 
@@ -12,12 +12,12 @@ how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as inst
 
 ## Installation
 
-Install [nar](https://github.com/h2non/nar) as global package
+Install `nar` as global package
 ```bash
 $ nar install -g nar
 ```
 
-Install the plugin
+Install the task
 ```bash
 $ npm install grunt-nar --save-dev
 ```
