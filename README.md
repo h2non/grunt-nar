@@ -75,7 +75,7 @@ Creates an [executable binary-like](https://github.com/h2non/nar#executables) ar
 
 The generated archive will be fully self-contained, which means 
 that `node` and any runtime dependency will be embedded,
-and therefore you just can deploy it and as binary
+and therefore you just can deploy and run it as binary
 
 #### os
 Type: `string` Default: `current os`
